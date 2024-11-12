@@ -1,0 +1,234 @@
+@media  screen and (max-width: 767px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        transition: background-color 2s;
+        animation: animatebody 35s linear;
+    }
+
+    h1{
+        width: 100%;
+        background: rgb(32,84,142);
+        background: linear-gradient(355deg, rgba(32,84,142,1) 35%, rgba(23,23,5,1) 95%);
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 5px;
+        padding: 1rem;
+        text-transform: capitalize;
+        color: white;
+    }
+
+
+    .light-theme{
+        background-color: rgb(215, 194, 194);
+        color: black;
+    }
+
+    .dark-theme{
+        background-color: rgb(22, 18, 18);
+        color: white;
+    }
+    .voice-recognation{
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        
+    }
+
+    textarea{
+        padding: 10px;
+        max-width:300px;
+        font-family: verdana;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        resize: none;
+        font-size: 15px;
+        text-align: justify;
+        position: relative;
+    
+    }
+
+    
+    #textHere{
+        position: absolute;
+        top: -45px;
+        background: white;
+        padding: 5px;
+        border-radius: 4px;
+        animation: popup .7s linear infinite alternate-reverse;
+       
+    }
+
+    #textHere::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -9px;
+        right: 3px;
+        transform: rotate(180deg);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+    }
+
+    @keyframes popup {
+        0%{transform: translateY(0px);}
+        100%{transform: translateY(10px);}
+    }
+
+    .btn{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 5px;
+        
+
+    }
+
+    button{
+        position: relative;
+        width: 70%;
+        padding: 4px;
+        border-radius: 3px;
+        border: none;
+        background-color: burlywood;
+        font-weight: 500;
+        font-family: verdana,
+    }
+
+    
+    .btn1, .btn2, .btn3{
+        position: relative;
+    }
+
+    button{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    
+
+    button:active{
+        background-color: cyan;
+        transform: translateY(-2px);
+    }
+
+    .floater{
+        width: 3rem;
+        height: 3rem;
+        background-color: red;
+        margin: auto;
+        border-radius: 50%;
+        animation: animate 5s linear infinite alternate-reverse;
+        
+    
+    }
+
+    @keyframes animate{
+        from{transform: translateY(0px);
+            background-color: coral;}
+        to{transform: translateY(600px);
+            background-color: transparent;
+            outline: 2px solid yellow;}
+    }
+
+    .floater2{
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        margin: 400px 150px;
+        border-radius: 50%;
+        animation: animate2 5s ease-in infinite alternate-reverse;
+        z-index: 1001;
+
+    }
+
+    @keyframes animate2{
+        0%{transform: translateX(0px);
+            background-color: red;}
+        40%{transform: translateX(300px);}
+        60%{transform: translateY(130px);
+            background-color: cyan;}
+        100%{transform: translateY(-400px);}
+    }
+
+    .animations{
+        width: 70%;
+        height: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 520px;
+    }
+
+    .animations .circle2{
+        
+    }
+
+    .circle, .cube, .baxta{
+        width: 1rem;
+        height: 1rem;
+        background-color: red;
+        border-radius: 3px;
+        
+    }
+
+    .circle{
+        animation: pulse .6s infinite;
+    }
+
+    .cube{
+        animation: rotate 3s infinite alternate-reverse;
+    }
+
+    .baxta{
+        animation: faded 6s infinite alternate-reverse;
+    }
+
+    @keyframes pulse{
+        0%, 100%{scale: 1;}
+        50%{scale: 1.7; background-color: yellow;
+        box-shadow: 0px 0px 50px 10px yellow ;}
+    }
+
+    @keyframes rotate{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+
+    @keyframes faded{
+        0%{opacity: 0;}
+        50%{opacity: 5;transform: translateY(-100px); background: coral;}
+        100%{opacity: 0;}
+    }
+
+    .sun{
+        width: 5rem;
+        height: 5rem;
+        background-color: yellow;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        opacity: 1;
+        transition: all 1s;
+        z-index: 10;
+    }
+    .sun:hover{
+        opacity: .6;
+        background-color: rgb(219, 219, 122);
+        box-shadow: 0px 0px 5rem 3rem yellow;
+        border: 1px cyan;
+    }
+
+}
+
