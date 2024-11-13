@@ -19,7 +19,7 @@
 
     
     <div class="voice-recognation">
-        <textarea name="" id="message" cols="30" rows="10" class="message">
+        <textarea name="" id="message" cols="30" placeholder="Enter text here" rows="10" class="message">
         </textarea>
         <br>
             <span id="textHere">Text Here</span>
@@ -49,65 +49,56 @@
 
     <div class="animations">
         <span class="circle"></span>
-        <span class="cube"></span>
+        <span class="baxta"></span>
         <span class="cube"></span>
         <span class="baxta"></span>
+        <span class="circle"></span>
     </div>
 
-    <script>
-        let Voice = new SpeechSynthesisUtterance();
 
-    
 
-        function play(){
-            let speech = document.getElementById('message').value;
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-                });
 
-            
-            Voice.lang = 'en';
-            Voice.text = speech;
 
-            window.speechSynthesis.speak(Voice);
-            
-        }
 
-        function theme(){
-            const body = document.body;
-           body.classList.toggle('light-theme');
-           body.classList.toggle('dark-theme');
-          
-           document.getElementById('message').style.backgroundColor='grey';
-        }
+    <div class="ForMuic">
+        <h1>Music Player</h1>
 
-        function stop(){
-            if (Voice){
-                window.speechSynthesis.cancel();
-            }
-        }
+        <div class="music">
 
-        function clearMsg(){
-           let clearMsg = document.getElementById('message');
+            <div class="songArtist">
+                <span>Jade Formentera</span>
+            </div>
 
-           clearMsg.value = "";
-        }
+            <div class="ImgDisk">
+                <img src="./Image/top hits.jpg" alt="image/png">
+            </div>
 
-        function floater(){
-            const popUp = document.getElementById('textHere');
-            popUp.style.display = "block";
 
-            setTimeout(()=>{
-                popUp.style.display = "none"
-            }, 4000);
+            <audio controls class="AudioRadio">
+                <source src="./Audio/How Many Hours.mp3">
+            </audio>
 
-            
-        }
+                    <input type="range">
 
-        window.onload = function (){
-                setTimeout(floater,1000)
-            };
+                <div class="MusicDuration">
 
-    </script>
+                    <span class="timeStart">00</span>
+                    <span class="Duration">00</span>
+
+                </div>
+
+            <div class="buttonIcons">
+
+                <button class="previews">Preview</button>
+
+                <button class="btn-play">Play</button>
+
+                <button class="btn-next">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
 </body>
 </html>
